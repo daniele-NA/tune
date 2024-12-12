@@ -25,3 +25,6 @@ View:
     -)simply the 2 fragments that deal with the management of buttons, the SearchFragment communicates
     with SearchManagement (acting as its controller), home fragment pays particular attention to the Back calls
     and the handlers with which it manages progressBar and main ImageView animation
+
+
+PUT YOUR SONG INTO RAW FOLDER AND REGISTER IT INTO CurrentSongProperties.kt  (changhe the parameters into songMap)
