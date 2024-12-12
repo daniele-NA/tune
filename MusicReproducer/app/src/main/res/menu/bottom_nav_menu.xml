@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_bar_menu"
+        android:icon="@drawable/home_icon"
+        android:title="Home"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/search_bar_menu"
+        android:icon="@drawable/search_icon"
+        android:title="Search"
+        tools:ignore="HardcodedText" />
+    
+
+</menu>

@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Theme.Default" parent="Theme.MaterialComponents.Light.DarkActionBar"/>
+
+
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25%</item>
+    </style>
+
+
+</resources>

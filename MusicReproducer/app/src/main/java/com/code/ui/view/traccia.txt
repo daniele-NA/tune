@@ -1,0 +1,26 @@
+Controller:
+
+    -)abbiamo un file.kt SearchManagement che implementa tutte le funzioni per il recyclerView,come la ricerca
+    ,l'animazione e l'estrazione delle canzoni.
+
+    -)L'Object Switcher invece si occupa di tenere le attività correnti nella variabile currentActivity,
+    switcha tra le pagine e crea la notifica interfacciandosi con il MusicService::class.java
+
+        notification:
+            -)il Service si occupa della creazione della notifica decidendo colori,Intent che riporta all'applicaizone
+            e metodo sendNotification,la gestione dei tasti avviene dentro il servizio stesso
+
+
+Model:
+
+    -)CurrentSongProperties è un databse statico accessibile da tutte le classi e tiene tutti i metodi per la getsione del
+    mediaPlayer
+
+    -)La classe Song invece incapsula titolo e autore,quest'ultima fa da KEY nell'HashMap con le risorse RAW (VALUE)
+    
+View:
+
+    -)semplicemente i 2 fragment che si occupano della gestione di pulsanti,il SearchFragment comunica
+    con SearchManagement(gli fa da controller),home fragment rivolge particolare attenzione in quelle che sono le callBack
+    e gli handler con le quali gestisce progressBar ed animazione ImageView principale
+
