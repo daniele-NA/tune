@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Ck Player"
+rootProject.name = "tune"
 include(":app")
  
