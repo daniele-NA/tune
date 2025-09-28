@@ -1,30 +1,34 @@
-# Kotlin-Android_Music_Reproducer
+# 🎵 Kotlin-Android Music Reproducer
 
-Controllers:
+Un riproduttore musicale semplice ma potente per Android, costruito con **Kotlin**. Supporta ricerca, riproduzione e notifiche interattive, tutto gestito in modo modulare.
 
-    -)we have a SearchManagement.kt file that implements all functions for the recyclerView, such as search
-    ,animation and song extraction.
+## ✨ Funzionalità principali
 
-    -)The Object Switcher instead takes care of keeping the current activities in the currentActivity variable,
-    switch between the pages and create the notification by interfacing with the MusicService::class.java
+* 🔍 **Ricerca e gestione playlist** – Cerca e visualizza le canzoni tramite RecyclerView.
+* 🎶 **Riproduzione musicale** – Controllo completo tramite MediaPlayer, con gestione centralizzata dello stato.
+* 🔄 **Switch tra pagine** – Mantiene traccia dell’attività corrente e gestisce la navigazione tra i fragment.
+* 🔔 **Notifiche interattive** – Il servizio musicale crea notifiche con colori, Intents e gestione dei tasti di controllo.
+* 🖼️ **Animazioni e interfaccia** – ProgressBar e animazioni sull’ImageView principale rendono l’esperienza più dinamica.
 
-        notification:
-            -) the Service takes care of the creation of the notification by deciding colors, Intent which reports to the application
-            and sendNotification method, key management takes place within the service itself
+## 🛠️ Architettura
 
+* **Controllers**
 
-Model:
+  * `SearchManagement.kt`: gestione della ricerca, animazioni e popolamento del RecyclerView.
+  * `ObjectSwitcher`: gestione attività correnti, navigazione e creazione delle notifiche tramite `MusicService`.
 
-    -)CurrentSongProperties is a static database accessible from all classes and holds all the methods for managing the
-    mediaPlayer
+* **Model**
 
-    -)The Song class instead encapsulates title and author, the latter acts as KEY in the HashMap with RAW resources (VALUE)
-    
-View:
+  * `CurrentSongProperties`: database statico centrale per il MediaPlayer.
+  * `Song`: incapsula titolo e autore; l’autore funge da chiave per le risorse RAW.
 
-    -)simply the 2 fragments that deal with the management of buttons, the SearchFragment communicates
-    with SearchManagement (acting as its controller), home fragment pays particular attention to the Back calls
-    and the handlers with which it manages progressBar and main ImageView animation
+* **View**
 
+  * `SearchFragment`: interfaccia per la ricerca e comunicazione con il controller.
+  * `HomeFragment`: gestisce pulsanti, progressBar e animazioni principali.
 
-PUT YOUR SONG INTO RAW FOLDER AND REGISTER IT INTO CurrentSongProperties.kt  (changhe the parameters into songMap)
+## ⚡ Uso rapido
+
+1. Inserisci le tue canzoni nella cartella `res/raw`.
+2. Registra i file in `CurrentSongProperties.kt` modificando `songMap`.
+3. Avvia l’app e goditi la riproduzione con notifiche integrate.
